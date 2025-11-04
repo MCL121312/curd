@@ -1,0 +1,48 @@
+{
+  "name": "curd",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test:watch": "vitest",
+    "test": "vitest --run",
+    "type-check": "vue-tsc -b --noEmit",
+    "check": "echo '🎨 格式化代码...' &&  prettier --write . && echo '✅ 代码格式化完成' && echo '🔍 检查代码质量...' && oxlint src && echo '✅ 代码质量检查完成' && echo '🔧 TypeScript 类型检查...' && vue-tsc -b --noEmit && echo '✅ 所有检查完成！'"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "element-plus": "^2.11.7",
+    "jsdom": "^27.1.0",
+    "nano-staged": "^0.8.0",
+    "oxlint": "^1.25.0",
+    "prettier": "^3.6.2",
+    "unplugin-auto-import": "^20.2.0",
+    "unplugin-vue-components": "^30.0.0",
+    "vitest": "^4.0.6",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite": "npm:rolldown-vite@7.1.20",
+    "vue-tsc": "^3.1.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "vite": "npm:rolldown-vite@7.1.20"
+    }
+  },
+  "nano-staged": {
+    "*.{js,ts,vue}": [
+      "prettier --write .",
+      "oxlint src --fix"
+    ]
+  }
+}
