@@ -13,9 +13,9 @@
     "check": "echo '🎨 格式化代码...' &&  prettier --write . && echo '✅ 代码格式化完成' && echo '🔍 检查代码质量...' && oxlint src && echo '✅ 代码质量检查完成' && echo '🔧 TypeScript 类型检查...' && vue-tsc -b --noEmit && echo '✅ 所有检查完成！'"
   },
   "dependencies": {
-    "dayjs": "^1.11.19",
-    "element-plus": "^2.11.7",
+    "date-fns": "^4.1.0",
     "jsdom": "^27.1.0",
+    "naive-ui": "^2.43.1",
     "nano-staged": "^0.8.0",
     "oxlint": "^1.25.0",
     "prettier": "^3.6.2",

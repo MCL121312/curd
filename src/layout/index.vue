@@ -6,7 +6,6 @@ defineOptions({
 
 <template>
   <div class="layout">
-    <div class="header">header</div>
     <div class="side">side</div>
     <section class="main">
       <router-view></router-view>
@@ -20,30 +19,26 @@ defineOptions({
   height: 100%;
   display: grid;
   grid-template-columns: 200px 1fr;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas:
-    'header header'
-    'side main';
+  grid-template-rows: 1fr;
+  grid-template-areas: 'side main';
   overflow: hidden;
   box-sizing: border-box;
-
-  .header {
-    grid-area: header;
-    height: 50px;
-    background-color: antiquewhite;
-  }
+  gap: 10px;
+  padding: 8px;
   .side {
     grid-area: side;
     width: 200px;
     height: 100%;
     background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 8px;
   }
   .main {
     grid-area: main;
-    /* height: calc(100% - 50px); */
     height: 100%;
-    background-color: #fff;
+    background-color: hsl(0, 0%, 96%);
     box-sizing: border-box;
+    border-radius: 8px;
   }
 }
 </style>

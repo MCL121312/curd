@@ -11,6 +11,9 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    NDataTable: typeof import('naive-ui')['NDataTable']
+    NPagination: typeof import('naive-ui')['NPagination']
+    NSlider: typeof import('naive-ui')['NSlider']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { ElConfigProvider } from 'element-plus';
-import zhCn from 'element-plus/es/locale/lang/zh-cn';
+import { NConfigProvider } from 'naive-ui';
+import { zhCN, dateZhCN } from 'naive-ui';
 </script>
 
 <template>
-  <el-config-provider :locale="zhCn">
+  <n-config-provider :locale="zhCN" :date-locale="dateZhCN" style="height: 100%; width: 100%">
     <router-view></router-view>
-  </el-config-provider>
+  </n-config-provider>
 </template>
