@@ -10,10 +10,12 @@
     "test:watch": "vitest",
     "test": "vitest --run",
     "type-check": "vue-tsc -b --noEmit",
+    "prepare": "husky",
     "check": "echo '🎨 格式化代码...' &&  prettier --write . && echo '✅ 代码格式化完成' && echo '🔍 检查代码质量...' && oxlint src && echo '✅ 代码质量检查完成' && echo '🔧 TypeScript 类型检查...' && vue-tsc -b --noEmit && echo '✅ 所有检查完成！'"
   },
   "dependencies": {
     "date-fns": "^4.1.0",
+    "husky": "^9.1.7",
     "jsdom": "^27.1.0",
     "naive-ui": "^2.43.1",
     "nano-staged": "^0.8.0",

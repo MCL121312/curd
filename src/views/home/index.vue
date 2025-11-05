@@ -33,7 +33,7 @@ function createColumns(): DataTableColumns<RowData> {
       width: 100,
       fixed: 'left',
     },
-    
+
     {
       title: 'Address',
       key: 'address',
@@ -46,10 +46,10 @@ function createColumns(): DataTableColumns<RowData> {
 const data = ref<RowData[]>([]);
 const rawData = computed(() =>
   Array.from({ length: 51 }, (_, index) => ({
-    key: index ,
-    name: `Edward King ${index+ 1}`,
+    key: index,
+    name: `Edward King ${index + 1}`,
     age: 18,
-    address: `London, Park Lane no. ${index+ 1}`,
+    address: `London, Park Lane no. ${index + 1}`,
   })),
 );
 
@@ -61,7 +61,6 @@ const columns = createColumns();
 const { pagination, pageSizes, changePageNumber, changePageSize, getPaginatedData } =
   usePagination();
 
-
 const handlePageChange = (newPage: number) => {
   changePageNumber(newPage);
   data.value = getPaginatedData(rawData.value);
@@ -72,8 +71,8 @@ const handlePageSizeChange = (newSize: number) => {
   data.value = getPaginatedData(rawData.value);
 };
 
-onMounted( () => {
-   loadData();
+onMounted(() => {
+  loadData();
   pagination.value.total = rawData.value.length;
 });
 </script>
@@ -108,7 +107,7 @@ onMounted( () => {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 50px;
   grid-template-areas: 'table' 'pagination';
-  .table{
+  .table {
     grid-area: table;
   }
   .pagination {

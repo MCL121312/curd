@@ -1,0 +1,2 @@
+# 运行 nano-staged 进行代码格式化和检查
+pnpx nano-staged
