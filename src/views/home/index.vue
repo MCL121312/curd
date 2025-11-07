@@ -76,6 +76,7 @@ onMounted(() => {
   pagination.value.total = rawData.value.length;
 });
 </script>
+
 <template>
   <div class="home">
     <n-data-table
