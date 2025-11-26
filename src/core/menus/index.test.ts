@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { useMenus } from '.';
+import { useMenus } from '@/core/menus';
 
 describe('menus', () => {
   it('应该可以获取菜单配置', () => {

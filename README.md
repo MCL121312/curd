@@ -8,7 +8,6 @@
 
 ```
 src/shared/
-├── domain/      # 领域层 - 核心业务逻辑
 ├── viewModel/   # 视图模型层 - UI 状态管理
 └── operation/   # 运营层 - 业务辅助工具
 ```
@@ -94,16 +93,12 @@ Views → ViewModel → Domain
 
 ```
 src/shared/
-├── domain/[业务领域]/[功能].ts
+├── core/[业务领域]/[功能].ts
 ├── viewModel/use[功能名]/index.ts
 └── operation/use[功能名]/index.ts 
 ```
 
-### 命名约定
-
-- ViewModel/Operation: `use` 前缀
-- Domain: 动词或名词
-- 必须编写单元测试
+ 
 
 ### 代码要求
 
@@ -126,7 +121,7 @@ export const useTool = () => {
 };
 ```
 
-**Domain**:
+**Core**:
 ```typescript
 // 纯函数,不依赖框架
 export function businessRule(input: Type): Result {
@@ -141,7 +136,7 @@ export function businessRule(input: Type): Result {
 | 场景 | 层次 |
 |------|------|
 | 表单/分页/弹窗状态 | ViewModel |
-| 订单计算/权限判断 | Domain |
+| 订单计算/权限判断 | core |
 | Excel导出/批量处理 | Operation |
 
 ---
